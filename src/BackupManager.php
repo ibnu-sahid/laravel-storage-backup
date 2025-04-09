@@ -9,26 +9,44 @@ class BackupManager
 {
     public function backupStorage($destinationPath = null)
     {
-        $zip = new ZipArchive;
-        $backupPath = $destinationPath ?? storage_path('app/backup/storage_' . now()->format('Ymd_His') . '.zip');
+    $zip = new \ZipArchive();
 
-        $storagePath = storage_path();
-        $files = new \RecursiveIteratorIterator(
-            new \RecursiveDirectoryIterator($storagePath),
-            \RecursiveIteratorIterator::LEAVES_ONLY
-        );
+    $timestamp = now()->format('Ymd_His');
+    $filename = "storage_{$timestamp}.zip";
 
-        if ($zip->open($backupPath, ZipArchive::CREATE | ZipArchive::OVERWRITE)) {
-            foreach ($files as $name => $file) {
-                if (!$file->isDir()) {
-                    $filePath = $file->getRealPath();
-                    $relativePath = substr($filePath, strlen($storagePath) + 1);
-                    $zip->addFile($filePath, $relativePath);
-                }
-            }
-            $zip->close();
-        }
+    $backupPath = $destinationPath ?? storage_path("app/backup/{$filename}");
 
-        return $backupPath;
+    // Pastikan folder tujuan ada
+    $backupDir = dirname($backupPath);
+    if (!file_exists($backupDir)) {
+        mkdir($backupDir, 0755, true);
     }
+
+    // Coba buka zip file
+    $res = $zip->open($backupPath, \ZipArchive::CREATE | \ZipArchive::OVERWRITE);
+
+    if ($res !== true) {
+        throw new \Exception("Failed to create ZIP file at $backupPath. Error code: $res");
+    }
+
+    $storagePath = storage_path('app');
+
+    $files = new \RecursiveIteratorIterator(
+        new \RecursiveDirectoryIterator($storagePath),
+        \RecursiveIteratorIterator::LEAVES_ONLY
+    );
+
+    foreach ($files as $name => $file) {
+        if (!$file->isDir()) {
+            $filePath = $file->getRealPath();
+            $relativePath = ltrim(str_replace($storagePath, '', $filePath), DIRECTORY_SEPARATOR);
+            $zip->addFile($filePath, $relativePath);
+        }
+    }
+
+    $zip->close();
+
+    return $backupPath;
+}
+
 }
