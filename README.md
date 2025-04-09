@@ -33,7 +33,8 @@ This command will recursively include all files and folders under storage/app, p
 
 After running:
 
-php artisan storage:backup
+**php artisan storage:backup**
+
 You’ll get something like:
 
 ```bash
@@ -66,4 +67,4 @@ You can manually test by running the backup command and checking the ZIP file in
 
 🧑‍💻 Author
 
-Developed by Ibnu Sahid
+_Developed by Ibnu Sahid_
