@@ -14,7 +14,7 @@ class BackupManager
     $timestamp = now()->format('Ymd_His');
     $filename = "storage_{$timestamp}.zip";
 
-    $backupPath = $destinationPath ?? storage_path("app/backup/{$filename}");
+    $backupPath = $destinationPath ?? storage_path("app/{$filename}");
 
     // Pastikan folder tujuan ada
     $backupDir = dirname($backupPath);
