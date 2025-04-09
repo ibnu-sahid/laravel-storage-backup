@@ -1,5 +1,5 @@
 {
-    "name": "IBNU-SAHID/storage-backup",
+    "name": "ibnu-sahid/laravel-storage-backup",
     "description": "Laravel package to backup storage folder into ZIP",
     "type": "library",
     "license": "MIT",
