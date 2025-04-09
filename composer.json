@@ -1,0 +1,28 @@
+{
+    "name": "IBNU-SAHID/storage-backup",
+    "description": "Laravel package to backup storage folder into ZIP",
+    "type": "library",
+    "license": "MIT",
+    "authors": [{
+        "name": "Ibnu Sahid",
+        "email": "ibnusahid.me@gmail.com"
+    }],
+    "require": {
+        "php": "^8.0",
+        "illuminate/support": "^9.0|^10.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "IbnuSahid\\StorageBackup\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "IbnuSahid\\StorageBackup\\StorageBackupServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
