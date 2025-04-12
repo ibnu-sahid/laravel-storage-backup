@@ -2,6 +2,7 @@
 # Laravel Storage Backup
 
 A simple Laravel package to back up your application's `storage/app` folder into a ZIP file.
+
 https://packagist.org/packages/ibnu-sahid/laravel-storage-backup
 
 ## 🔧 Installation
