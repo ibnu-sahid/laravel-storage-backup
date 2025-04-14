@@ -1,15 +1,30 @@
 {
     "name": "ibnu-sahid/laravel-storage-backup",
-    "description": "Laravel package to backup storage folder into ZIP",
+    "description": "Laravel package to backup storage",
     "type": "library",
     "license": "MIT",
-    "authors": [{
-        "name": "Ibnu Sahid",
-        "email": "ibnusahid.me@gmail.com"
-    }],
+    "authors": [
+        {
+            "name": "Ibnu Sahid",
+            "email": "ibnu.sahid@gmail.com",
+            "role": "Developer"
+        },
+        {
+            "name": "Martin Lechene",
+            "email": "martin@lechene.com",
+            "role": "Contributor",
+        }
+    ],
     "require": {
         "php": "^8.0",
-        "illuminate/support": "^9.0|^10.0"
+        "illuminate/support": "^9.0",
+        "illuminate/console": "^9.0",
+        "illuminate/filesystem": "^9.0",
+        "league/flysystem-aws-s3-v3": "^3.0",
+        "league/flysystem-ftp": "^3.0",
+        "league/flysystem-sftp": "^3.0",
+        "league/flysystem-google-cloud-storage": "^3.0",
+        "league/flysystem-azure-blob-storage": "^3.0"
     },
     "autoload": {
         "psr-4": {
