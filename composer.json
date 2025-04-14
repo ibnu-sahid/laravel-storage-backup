@@ -3,8 +3,7 @@
     "description": "Laravel package to backup storage",
     "type": "library",
     "license": "MIT",
-    "authors": [
-        {
+    "authors": [{
             "name": "Ibnu Sahid",
             "email": "ibnu.sahid@gmail.com",
             "role": "Developer"
@@ -12,9 +11,10 @@
         {
             "name": "Martin Lechene",
             "email": "martin@lechene.com",
-            "role": "Contributor",
+            "role": "Contributor"
         }
     ],
+
     "require": {
         "php": "^8.0",
         "illuminate/support": "^9.0",
