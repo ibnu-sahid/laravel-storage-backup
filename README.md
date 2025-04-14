@@ -62,40 +62,40 @@ php artisan storage:backup --suggest
 
 ### 🔄 Backup
 
-| Option | Description |
-|--------|-------------|
-| `--folders` | List of folders to backup |
-| `--storage` | Storage type to use (local, s3, ftp, sftp, gcs, azure) |
-| `--schedule` | Enable scheduling |
-| `--frequency` | Backup frequency (hourly, daily, weekly, monthly) |
-| `--time` | Time for daily/weekly/monthly backup |
-| `--day` | Day for weekly/monthly backup |
-| `--keep-last` | Number of backups to keep |
-| `--keep-days` | Number of days to keep backups |
-| `--keep-size` | Maximum size of backups to keep |
-| `--suggest` | Show folder suggestions |
+| Option        | Description                                            |
+| ------------- | ------------------------------------------------------ |
+| `--folders`   | List of folders to backup                              |
+| `--storage`   | Storage type to use (local, s3, ftp, sftp, gcs, azure) |
+| `--schedule`  | Enable scheduling                                      |
+| `--frequency` | Backup frequency (hourly, daily, weekly, monthly)      |
+| `--time`      | Time for daily/weekly/monthly backup                   |
+| `--day`       | Day for weekly/monthly backup                          |
+| `--keep-last` | Number of backups to keep                              |
+| `--keep-days` | Number of days to keep backups                         |
+| `--keep-size` | Maximum size of backups to keep                        |
+| `--suggest`   | Show folder suggestions                                |
 
 ### ⏰ Schedule
 
-| Option | Description |
-|--------|-------------|
-| `--folders` | List of folders to backup |
-| `--storage` | Storage type to use (local, s3, ftp, sftp, gcs, azure) |
-| `--frequency` | Backup frequency (hourly, daily, weekly, monthly) |
-| `--time` | Time for daily/weekly/monthly backup |
-| `--day` | Day for weekly/monthly backup |
-| `--keep-last` | Number of backups to keep |
-| `--keep-days` | Number of days to keep backups |
-| `--keep-size` | Maximum size of backups to keep |
+| Option        | Description                                            |
+| ------------- | ------------------------------------------------------ |
+| `--folders`   | List of folders to backup                              |
+| `--storage`   | Storage type to use (local, s3, ftp, sftp, gcs, azure) |
+| `--frequency` | Backup frequency (hourly, daily, weekly, monthly)      |
+| `--time`      | Time for daily/weekly/monthly backup                   |
+| `--day`       | Day for weekly/monthly backup                          |
+| `--keep-last` | Number of backups to keep                              |
+| `--keep-days` | Number of days to keep backups                         |
+| `--keep-size` | Maximum size of backups to keep                        |
 
 ### 🧹 Clean
 
-| Option | Description |
-|--------|-------------|
-| `--keep-last` | Number of backups to keep |
-| `--keep-days` | Number of days to keep backups |
-| `--keep-size` | Maximum size of backups to keep |
-| `--storage` | Storage type to use (local, s3, ftp, sftp, gcs, azure) |
+| Option        | Description                                            |
+| ------------- | ------------------------------------------------------ |
+| `--keep-last` | Number of backups to keep                              |
+| `--keep-days` | Number of days to keep backups                         |
+| `--keep-size` | Maximum size of backups to keep                        |
+| `--storage`   | Storage type to use (local, s3, ftp, sftp, gcs, azure) |
 
 ## ⚙️ Configuration
 
@@ -234,6 +234,10 @@ php artisan storage:backup --suggest
     ],
 ],
 ```
+
+## 📓 Changelog
+
+See [CHANGELOG.md](./CHANGELOG.md) for details about recent updates.
 
 ## 📝 TODO
 
